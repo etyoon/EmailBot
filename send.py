@@ -9,6 +9,9 @@ email_sender = 'Dorchester5623@gmail.com'
 body = {'T': " It's your turn to take out the trash",
 'D': " It's your turn to take out the dishes"}
 
+with open(path, 'r') as f:
+    pass = f.readlines()
+
 def go():
     chores = bot.update()
     print(chores)
@@ -21,9 +24,10 @@ def go():
         msg.set_content("Hi " + str(person) + body[chore])
 
         context = ssl.create_default_context()
+        
 
         with smtplib.SMTP_SSL('smtp.gmail.com', 465, context=context) as smtp:
-            smtp.login(email_sender, 'azmuulilkcptbaed')
+            smtp.login(email_sender, pass)
             smtp.sendmail(email_sender, email[person], msg.as_string())
     
     print('Done')
