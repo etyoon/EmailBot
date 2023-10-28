@@ -4,8 +4,8 @@ import ssl
 import bot
 from datetime import date
 
-email = {'ethan': 'etyoon06@gmail.com', 'aman': 'amanshah@uchicago.edu', 'jai': 'jaisahni@uchicago.edu', 'adit': 'adit19@uchicago.edu'}
-email_sender = 'Dorchester5623@gmail.com'
+email = #dictionary of emails
+email_sender = #email
 body = {'T': " It's your turn to take out the trash",
 'D': " It's your turn to take out the dishes"}
 
